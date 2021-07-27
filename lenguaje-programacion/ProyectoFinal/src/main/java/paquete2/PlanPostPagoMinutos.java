@@ -29,7 +29,7 @@ public class PlanPostPagoMinutos extends PlanCelular implements Serializable {
         costoMinutoInternacional = cI;
     }
 
-    public void establecerMinutosNacionales(int n) {
+    public void establecerMinutosNacionales(double n) {
         minutosNacionales = n;
     }
 
@@ -37,7 +37,7 @@ public class PlanPostPagoMinutos extends PlanCelular implements Serializable {
         costoMinutoNacional = n;
     }
 
-    public void establecerMinutosInternacionales(int n) {
+    public void establecerMinutosInternacionales(double n) {
         minutosInternacionales = n;
     }
 

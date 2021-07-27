@@ -25,7 +25,7 @@ public class PlanPostPagoMinutosMegas extends PlanCelular {
         costoGigas = cG;
     }
 
-    public void establecerMinutos(int n) {
+    public void establecerMinutos(double n) {
         minutos = n;
     }
 
