@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import paquete2.EscrituraArchivoSecuencial;
 import paquete2.LecturaArchivoSecuencial;
-import paquete2.PlanPostPagoMinutos;
 
 /**
  *
