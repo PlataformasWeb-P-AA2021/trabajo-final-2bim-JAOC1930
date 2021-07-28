@@ -6,8 +6,6 @@
 package paquete1;
 
 import java.io.Serializable;
-import paquete1.Persona;
-import paquete1.PlanCelular;
 
 /**
  *

@@ -16,7 +16,8 @@ import paquete1.PlanCelular;
  * @author Usuario
  */
 public class EscrituraArchivoSecuencial {
-       private String nombreArchivo;
+
+    private String nombreArchivo;
     private ObjectOutputStream salida; // envía los datos a un archivo
     private PlanCelular registro;
     private ArrayList<PlanCelular> lista;
@@ -24,7 +25,7 @@ public class EscrituraArchivoSecuencial {
     public EscrituraArchivoSecuencial(String nombreArc) {
         nombreArchivo = nombreArc;
         establecerLista(); // obtener los valores (objetos)
-                                    // que tiene el archivo.
+        // que tiene el archivo.
         // System.out.println(obtenerListaProfesores().size());
         try // abre el archivo
         {
@@ -42,11 +43,11 @@ public class EscrituraArchivoSecuencial {
             System.err.println("Error al abrir el archivo." + ioException);
         } // fin de catch
     }
-    
-    public void establecerNombreArchivo(String n){
+
+    public void establecerNombreArchivo(String n) {
         nombreArchivo = n;
     }
-    
+
     // agrega registros al archivo
     public void establecerRegistro(PlanCelular p) {
         registro = p;
@@ -55,7 +56,7 @@ public class EscrituraArchivoSecuencial {
     public void establecerSalida() {
         try {
             salida.writeObject(registro); // envía el registro como salida
-            
+
         } catch (IOException ex) {
             System.err.println("Error al escribir en el archivo.");
             System.err.println(ex);
@@ -65,31 +66,30 @@ public class EscrituraArchivoSecuencial {
     // en el atributo listaPasajes obtenemos los registros 
     // del archivo
     public void establecerLista() {
-        LecturaArchivoSecuencial l = 
-                new LecturaArchivoSecuencial(obtenerNombreArchivo());
+        LecturaArchivoSecuencial l
+                = new LecturaArchivoSecuencial(obtenerNombreArchivo());
         l.establecerPlanCelular();
         lista = l.obtenerPlanCelular();
     }
 
-    public String obtenerNombreArchivo(){
+    public String obtenerNombreArchivo() {
         return nombreArchivo;
     }
-    
+
     public ArrayList<PlanCelular> obtenerLista() {
         return lista;
     }
 
-    public ObjectOutputStream obtenerSalida(){
+    public ObjectOutputStream obtenerSalida() {
         return salida;
     }
-    
+
     // obtener registros al archivo
     public PlanCelular obtenerRegistro() {
         // System.out.println(p);
         return registro;
     }
-    
-    
+
     public void cerrarArchivo() {
         try // cierra el archivo
         {
@@ -99,8 +99,8 @@ public class EscrituraArchivoSecuencial {
         } // fin de try
         catch (IOException ioException) {
             System.err.println("Error al cerrar el archivo.");
-            
+
         } // fin de catch
-    } 
+    }
 
 }

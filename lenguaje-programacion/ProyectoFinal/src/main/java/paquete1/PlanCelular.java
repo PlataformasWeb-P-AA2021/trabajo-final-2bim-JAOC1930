@@ -11,63 +11,64 @@ import java.io.Serializable;
  *
  * @author macbookair
  */
-public abstract class PlanCelular implements Serializable{
+public abstract class PlanCelular implements Serializable {
+
     protected Persona cliente;
     protected String marcaCelular;
     protected String modeloCelular;
     protected int numeroCelular;
     protected double pagoMensual;
-    
-    public PlanCelular(Persona c, String mC, String moC, int nC){
+
+    public PlanCelular(Persona c, String mC, String moC, int nC) {
         cliente = c;
         marcaCelular = mC;
         modeloCelular = moC;
         numeroCelular = nC;
     }
-    
-    public void establecerCliente(Persona n){
+
+    public void establecerCliente(Persona n) {
         cliente = n;
     }
-    
-    public void establecerMarcaCelular(String n){
+
+    public void establecerMarcaCelular(String n) {
         marcaCelular = n;
     }
-    
-    public void establecerModeloCelular(String n){
+
+    public void establecerModeloCelular(String n) {
         modeloCelular = n;
     }
-    
-    public void establecerNumeroCelular(int n){
+
+    public void establecerNumeroCelular(int n) {
         numeroCelular = n;
     }
-    
+
     public abstract void calcularPagoMensual();
-    
-    public Persona obtenerCliente(){
+
+    public Persona obtenerCliente() {
         return cliente;
     }
-    
-    public String obtenerMarcaCelular(){
+
+    public String obtenerMarcaCelular() {
         return marcaCelular;
     }
-    
-    public String obtenerModeloCelular(){
+
+    public String obtenerModeloCelular() {
         return modeloCelular;
     }
-    
-    public int obtenerNumeroCelular(){
+
+    public int obtenerNumeroCelular() {
         return numeroCelular;
     }
-    
-    public double obtenerPagoMensual(){
+
+    public double obtenerPagoMensual() {
         return pagoMensual;
     }
-    
-   @Override
+
+    @Override
     public String toString() {
         String cadena = String.format("\nNombres: %s\nApellidos: %s\n"
                 + "Identificación: %s\nCiudad: %s\nMarca celular: %s\n"
-                + "Modelo del celular: %s\nNúmero del celular: %d", 
+                + "Modelo del celular: %s\nNúmero del celular: %d",
                 cliente.obtenerNombres(),
                 cliente.obtenerApellidos(),
                 cliente.obtenerIdentificacion(),
@@ -77,5 +78,5 @@ public abstract class PlanCelular implements Serializable{
                 obtenerNumeroCelular());
         return cadena;
     }
-    
+
 }

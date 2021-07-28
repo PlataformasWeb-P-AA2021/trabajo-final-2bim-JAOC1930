@@ -103,6 +103,7 @@ public class Ejecutor {
             String ciudad, String marcaCelular, String modeloCelular,
             int numeroCelular) {
         Scanner entrada = new Scanner(System.in);
+        
         Persona p = new Persona(nombre, apellidos, identificacion, ciudad);
 
         System.out.println("Ingrese los minutos nacionales");
